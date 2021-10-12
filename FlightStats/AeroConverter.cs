@@ -21,7 +21,7 @@ namespace FlightStats
         /// <returns>Celsius converted in Kelvin with precision of 2 decimal places (12.34)</returns>
         public double ConvertCelsiusToKelvin(double temperatureInCelsius)
         {
-            throw new NotImplementedException();
+            return Math.Round(temperatureInCelsius + 273, 2);
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace FlightStats
         /// <returns>Fahrenheit converted in Celsius with precision of 2 decimal places (12.34)</returns>
         public double ConvertFahrenheitToCelsius(double temperatureInFahrenheit)
         {
-            throw new NotImplementedException();
+            return Math.Round((temperatureInFahrenheit - 32) * 5 / 9, 2);
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace FlightStats
         /// <returns>Fahrenheit converted in Kelvin with precision of 2 decimal places (12.34)</returns>
         public double ConvertFahrenheitToKelvin(double temperatureInFahrenheit)
         {
-            throw new NotImplementedException();
+            return Math.Round(ConvertFahrenheitToCelsius(temperatureInFahrenheit) + 273,2);
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace FlightStats
         /// <returns>Local speed of sound in knots with precision of 2 decimal places (12.34)</returns>
         public double LocalSpeedOfSound(double temperatureInKelvin)
         {
-            throw new NotImplementedException();
+            return Math.Round(38.94 * Math.Pow(temperatureInKelvin, 0.5),2);
         }
         #endregion public methods
     }
