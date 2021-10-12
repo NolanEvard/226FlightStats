@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightStats", "FlightStats\FlightStats.csproj", "{28807420-2978-4AB3-8C0E-ABCFC5DFDE4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFlightStats", "TestFlightStats\TestFlightStats.csproj", "{3D906B20-BF85-43C6-9E51-8955A94C0C27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28807420-2978-4AB3-8C0E-ABCFC5DFDE4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28807420-2978-4AB3-8C0E-ABCFC5DFDE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28807420-2978-4AB3-8C0E-ABCFC5DFDE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28807420-2978-4AB3-8C0E-ABCFC5DFDE4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D906B20-BF85-43C6-9E51-8955A94C0C27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D906B20-BF85-43C6-9E51-8955A94C0C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D906B20-BF85-43C6-9E51-8955A94C0C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D906B20-BF85-43C6-9E51-8955A94C0C27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7B27459-E232-4252-8354-377AA197C9F7}
+	EndGlobalSection
+EndGlobal
