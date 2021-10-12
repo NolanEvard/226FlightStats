@@ -9,6 +9,7 @@ namespace FlightStats
     public class AeroConverter
     {
         #region private attributes
+        //TODO constants
         #endregion region attributes
 
         #region public methods
@@ -45,7 +46,7 @@ namespace FlightStats
         /// <returns>Fahrenheit converted in Kelvin with precision of 2 decimal places (12.34)</returns>
         public double ConvertFahrenheitToKelvin(double temperatureInFahrenheit)
         {
-            return Math.Round(ConvertFahrenheitToCelsius(temperatureInFahrenheit) + 273,2);
+            return Math.Round(ConvertFahrenheitToCelsius(temperatureInFahrenheit) + 273,2); //TODO Use Celsius to Kelvin
         }
 
         /// <summary>
