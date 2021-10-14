@@ -80,7 +80,6 @@ namespace TestFlightStats
             //then
             Assert.AreEqual(expectedStringMessage, actualStringMessage);
         }
-
         /// <summary>
         /// This test method is designed to test the class with several values in different cases
         /// </summary>
@@ -125,6 +124,46 @@ namespace TestFlightStats
             {
                 Assert.AreEqual(msg.expectedListOfMessages, msg.actualListOfMessagse);
             }
+        }
+        [Test]
+        public void Measure_WrongFormat_ThrowWrongFormatMeasureException()
+        {
+            //given
+            string givenDataLog = "32.00;0.00;;643.39";
+            //when + then
+            Assert.Throws<WrongFormatException>(delegate
+            {
+                new Measure(givenDataLog);
+            }    
+            );
+        }
+        [Test]
+        public void ToString_ConstructorSingleString_Success()
+        {
+            //given
+            string expectedMessage = "22.00;-5.56;266.44;636.81";
+            Measure measure = new Measure(expectedMessage);
+            string actualString = "";
+
+            //when
+            actualString = measure.ToString();
+
+            //then
+            Assert.AreEqual(expectedMessage, actualString);
+        }
+        [Test]
+        public void ToString_ConstructorSingleStringEmpty_Success()
+        {
+            //given
+            string expectedMessage = "22.00;-5.56;266.44;";
+            Measure measure = new Measure(expectedMessage);
+            string actualString = "";
+
+            //when
+            actualString = measure.ToString();
+
+            //then
+            Assert.AreEqual(expectedMessage, actualString);
         }
     }
 }

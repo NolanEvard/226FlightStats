@@ -50,6 +50,29 @@ namespace FlightStats
             this.temperatureInKelvin = temperatureInKelvin;
             this.localSpeedOfSound = localSpeedOfSound;
         }
+        public Measure(string DataFromLog)
+        {
+            string[] splitedDatas;
+
+            //spliting log datas at each ";"
+            splitedDatas = DataFromLog.Split(";");
+
+            //run through all the log given datas
+            for (int i = 0; i < splitedDatas.Length; i++)
+            {
+                if(i > 0 && i < 3)
+                {
+                    if (string.IsNullOrEmpty(splitedDatas[i]))
+                    {
+                        throw new WrongFormatException();
+                    }
+                }                
+            }
+            temperatureInFahrenheit = double.Parse(splitedDatas[0]);
+            temperatureInCelsius = double.Parse(splitedDatas[1]);
+            temperatureInKelvin = double.Parse(splitedDatas[2]);
+            localSpeedOfSound = double.Parse(splitedDatas[3]);
+        }
         #endregion constructors
 
         #region public accessors and mutators methods
@@ -60,4 +83,6 @@ namespace FlightStats
         }
         #endregion public accessors and mutators methods
     }
+    public class MeasureException : Exception{}
+    public class WrongFormatException : MeasureException{}
 }
